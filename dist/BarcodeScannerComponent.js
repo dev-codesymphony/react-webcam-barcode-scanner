@@ -24,7 +24,9 @@ const BarcodeScannerComponent = ({ width, height, onUpdate }) => {
         setInterval(capture, 100);
     }, []);
     return (react_1.default.createElement(react_webcam_1.default, { width: width, height: height, ref: webcamRef, screenshotFormat: "image/png", videoConstraints: {
-            facingMode: 'environment'
+            facingMode: 'environment',
+        audio: false, 
+        video: true 
         } }));
 };
 exports.default = BarcodeScannerComponent;
